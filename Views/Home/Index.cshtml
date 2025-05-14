@@ -1,0 +1,71 @@
+﻿@model LibraryManagementSystem.ViewModels.BookVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Hero Section -->
+<section class="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+    <div class="px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Manage Your Library with Ease</h1>
+        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Streamline student management, book inventory, and borrowing processes with LibraryMS, your all-in-one library solution.</p>
+        <a href="/Books" class="inline-flex items-center px-6 py-3 text-base font-medium text-blue-600 bg-white rounded-md hover:bg-gray-100 transition">Explore the System</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="w-full py-16 bg-gray-50">
+    <div class="px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Our Features</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                <svg class="h-8 w-8 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 7l-9-5 9-5 9 5-9 5z" />
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Student Management</h3>
+                <p class="text-gray-600">Easily manage student profiles, track borrowing history, and update details.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                <svg class="h-8 w-8 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Book Inventory</h3>
+                <p class="text-gray-600">Add, edit, and track books with a user-friendly inventory system.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                <svg class="h-8 w-8 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Borrow & Return</h3>
+                <p class="text-gray-600">Simplify borrowing and return processes with real-time tracking.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                <svg class="h-8 w-8 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m0-10v2m6 8v2m0-10v-2m-9 8h2m8 0h-2m-8-8h-2m8 0h2m-4 8V5m0 14v-2" />
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Admin Dashboard</h3>
+                <p class="text-gray-600">Monitor and manage all library activities from a centralized dashboard.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Section -->
+<section id="testimonials" class="w-full py-16 bg-blue-100">
+    <div class="px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">What Our Users Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 italic mb-4">"LibraryMS has made managing our library so much easier. The interface is intuitive and efficient!"</p>
+                <p class="text-sm font-semibold text-gray-800">Sarah Johnson, Librarian</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 italic mb-4">"Borrowing books is a breeze with this system. I love how everything is organized!"</p>
+                <p class="text-sm font-semibold text-gray-800">Michael Chen, Student</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 italic mb-4">"The admin dashboard gives me full control over our library operations. Highly recommended!"</p>
+                <p class="text-sm font-semibold text-gray-800">Emily Davis, Admin</p>
+            </div>
+        </div>
+    </div>
+</section>

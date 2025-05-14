@@ -1,0 +1,57 @@
+@model LibraryManagementSystem.ViewModels.borrowRecordVM
+
+@{
+    ViewData["Title"] = "Create";
+    ViewData["SelectedController"] = "BorrowRecords";
+    Layout = "_DashboardLayout";
+}
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-10">Create Borrow Record</h1>
+
+    <div class="bg-white rounded-3xl shadow-xl p-8 max-w-lg mx-auto transform hover:scale-102 transition-all duration-500">
+        <h4 class="text-xl font-semibold text-gray-800 mb-6">New Borrow Record</h4>
+        <hr class="border-gray-200 mb-8">
+        <form asp-action="Create" class="space-y-6">
+            <div asp-validation-summary="ModelOnly" class="text-red-500 text-sm bg-red-50 p-4 rounded-lg"></div>
+            <div>
+                <label asp-for="StudentId" class="block text-sm font-medium text-gray-700 mb-2">Student</label>
+                <select asp-for="StudentId" class="block w-full rounded-lg border-gray-200 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 transition-all duration-300" asp-items="ViewBag.StudentId"></select>
+                <span asp-validation-for="StudentId" class="text-red-500 text-sm mt-1 block"></span>
+            </div>
+            <div>
+                <label asp-for="BookId" class="block text-sm font-medium text-gray-700 mb-2">Book</label>
+                <select asp-for="BookId" class="block w-full rounded-lg border-gray-200 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 transition-all duration-300" asp-items="ViewBag.BookId"></select>
+                <span asp-validation-for="BookId" class="text-red-500 text-sm mt-1 block"></span>
+            </div>
+            <div>
+                <label asp-for="BorrowDate" class="block text-sm font-medium text-gray-700 mb-2">Borrow Date</label>
+                <input asp-for="BorrowDate" type="date" class="block w-full rounded-lg border-gray-200 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 transition-all duration-300" />
+                <span asp-validation-for="BorrowDate" class="text-red-500 text-sm mt-1 block"></span>
+            </div>
+            <div>
+                <label asp-for="ReturnDate" class="block text-sm font-medium text-gray-700 mb-2">Return Date</label>
+                <input asp-for="ReturnDate" type="date" class="block w-full rounded-lg border-gray-200 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 transition-all duration-300" />
+                <span asp-validation-for="ReturnDate" class="text-red-500 text-sm mt-1 block"></span>
+            </div>
+            <div class="flex justify-end space-x-4">
+                <a asp-action="Index" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-all duration-300">
+                    <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Back to List
+                </a>
+                <button type="submit" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all duration-300">
+                    <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Create
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

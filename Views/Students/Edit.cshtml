@@ -1,0 +1,53 @@
+@model LibraryManagementSystem.ViewModels.StudentVm
+
+@{
+    ViewData["Title"] = "Edit";
+    ViewData["SelectedController"] = "Students";
+    Layout = "_DashboardLayout";
+}
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-10">Edit Student</h1>
+
+    <div class="bg-white rounded-3xl shadow-xl p-8 max-w-lg mx-auto transform hover:scale-102 transition-all duration-500">
+        <h4 class="text-xl font-semibold text-gray-800 mb-6">Student Details</h4>
+        <hr class="border-gray-200 mb-8">
+        <form asp-action="Edit" class="space-y-6">
+            <div asp-validation-summary="ModelOnly" class="text-red-500 text-sm bg-red-50 p-4 rounded-lg"></div>
+            <input type="hidden" asp-for="StudentId" />
+            <div>
+                <label asp-for="Name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                <input asp-for="Name" class="block w-full rounded-lg border-gray-200 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 transition-all duration-300" />
+                <span asp-validation-for="Name" class="text-red-500 text-sm mt-1 block"></span>
+            </div>
+            <div>
+                <label asp-for="Email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                <input asp-for="Email" class="block w-full rounded-lg border-gray-200 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 transition-all duration-300" />
+                <span asp-validation-for="Email" class="text-red-500 text-sm mt-1 block"></span>
+            </div>
+            <div>
+                <label asp-for="Phone" class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                <input asp-for="Phone" class="block w-full rounded-lg border-gray-200 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 transition-all duration-300" />
+                <span asp-validation-for="Phone" class="text-red-500 text-sm mt-1 block"></span>
+            </div>
+            <div class="flex justify-end space-x-4">
+                <a asp-action="Index" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-all duration-300">
+                    <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Back to List
+                </a>
+                <button type="submit" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all duration-300">
+                    <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
